@@ -6,6 +6,10 @@ with open('reviews.txt', 'r') as f:
 		count += 1
 		if count % 1000 == 0:
 			print(len(data))
-print(len(data))
+print(len(data), '筆資料已讀取完畢')
+alllen = 0
+for comment in data:
+	alllen = alllen + len(comment)
+print('每筆資料的平均長度為', alllen / len(data), 'byte')
 
 
