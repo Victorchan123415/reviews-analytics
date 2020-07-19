@@ -12,4 +12,11 @@ for comment in data:
 	alllen = alllen + len(comment)
 print('每筆資料的平均長度為', alllen / len(data), 'byte')
 
+new = []
+for comment in data:
+	if len(comment) < 100:
+		new.append(comment)
+print(len(new))
+print(new[0])
+
 
